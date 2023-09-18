@@ -1,5 +1,7 @@
 <?php
 
+use App\Http\Controllers\Users\LoginController;
+use App\Http\Controllers\Users\SignUpController;
 use Illuminate\Support\Facades\Route;
 
 /*
@@ -14,5 +16,11 @@ use Illuminate\Support\Facades\Route;
 */
 
 Route::get('/', function () {
-    return view('welcome');
+    return view('index');
 });
+
+Route::get('register', [SignUpController::class, 'index'])->name('register');
+Route::post('register', [SignUpController::class, 'store']);
+
+Route::get('login', [LoginController::class, 'index'])->name('default');
+Route::post('login', [LoginController::class, 'store']);
