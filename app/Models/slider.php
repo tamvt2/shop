@@ -5,12 +5,13 @@ namespace App\Models;
 use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Model;
 
-class Danhmuc extends Model
+class slider extends Model
 {
     use HasFactory;
 
     protected $fillable = [
-        'tendanhmuc',
+        'spID',
+        'thumb'
     ];
 
     public $timestamps = false;

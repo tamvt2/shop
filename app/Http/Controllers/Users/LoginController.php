@@ -25,7 +25,7 @@ class LoginController extends Controller
                 'name' => $request->input('name'),
                 'password' => $request->input('password')
             ])) {
-            return redirect()->route('register');
+            return redirect()->route('default');
         }
         Session::flash('error', 'Name hoặc Password không chính xác');
         return redirect()->back();
